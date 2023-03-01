@@ -1,0 +1,70 @@
+body,html{
+    margin: 0;
+    padding: 0;
+}
+#app{
+    padding: 20px;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+.swagger-url {
+    margin: 0 auto;
+    width: 600px;
+    flex: none;
+}
+.result-block {
+    margin-top: 20px;
+    flex: 1;
+    min-height: 1px;
+    display: flex;
+}
+.left-block {
+    padding-top: 20px;
+    padding-right: 20px;
+    width: 600px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.top-block {
+    margin-bottom: 20px;
+    flex: none;
+}
+.search-tree {
+    width: 400px;
+}
+.lefe-tree {
+    flex: 1;
+    min-height: 1px;
+    overflow-y: auto;
+}
+.right-block {
+    padding-top: 20px;
+    padding-left: 20px;
+    flex: 1;
+    min-width: 1px;
+    height: 100%;
+    border-left: 1px solid #DCDFE6;
+    display: flex;
+    flex-direction: column;
+}
+.choose {
+    margin-bottom: 10px;
+    flex: none;
+}
+.handle-block {
+    margin-bottom: 20px;
+    flex: none;
+}
+.handle-block > .el-input-group {
+    width: 320px;
+}
+.list-block {
+    flex: 1;
+    min-height: 1px;
+    overflow-y: auto;
+}
