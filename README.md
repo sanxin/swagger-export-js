@@ -11,4 +11,6 @@ swagger-exports-js：是一个基于vue2.x + element-ui + node 构成的项目�
 npm i
 // 再
 node app 
+
+// 打开 index.html 文件
 ```
