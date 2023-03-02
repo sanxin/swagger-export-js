@@ -2,16 +2,17 @@ const VueTemp = new Vue({
     el: '#app',
     template:
         `<div id="app">
-            <el-input placeholder="请输入swagger的 api-docs 地址" v-model="url" clearable class="swagger-url">
+            <el-input placeholder="请输入swagger的 api-docs 地址查询数据" v-model="url" clearable class="swagger-url">
                 <el-button slot="append" icon="el-icon-search" @click="searchUrlFn"></el-button>
             </el-input>
             <div class="result-block">
                 <div class="left-block">
                     <div class="top-block">
-                        <el-input placeholder="请输入地址" v-model="searchTree" clearable class="search-tree">
+                        <el-input placeholder="可搜索地址" v-model="searchTree" clearable class="search-tree">
                             <el-button slot="append" icon="el-icon-search" :disabled="!treeData.length" @click="searchTreeFn"></el-button>
                         </el-input>
                         <el-button type="success" plain icon="el-icon-plus" :disabled="!treeData.length" @click="addFn">加入右侧列表中</el-button>
+                        <el-button type="primary" plain :disabled="!treeData.length" @click="allClickFn">全部导出</el-button>
                     </div>
                     <el-tree
                         class="lefe-tree"
@@ -32,9 +33,9 @@ const VueTemp = new Vue({
                         <el-input placeholder="请输入生成的名称" v-model="filename" clearable >
                             <el-button slot="append" type="primary" plain @click="chooseClickFn">选择导出</el-button>
                         </el-input>
-                        <el-button type="primary" plain @click="allClickFn">全部导出</el-button>
                         <el-button type="danger" plain :disabled="chooseNode.length == 0" @click="clearClickFn">清空列表</el-button>
                     </div>
+                    <div class="choose-title">选中列表：</div>
                     <div class="list-block">
                         <p v-for="item in chooseNode" :key="item.id">{{item.name }}</p>
                     </div>
