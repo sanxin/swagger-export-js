@@ -31,7 +31,7 @@ const VueTemp = new Vue({
                     </div>
                     <div class="handle-block">
                         <el-input placeholder="请输入生成的名称" v-model="filename" clearable >
-                            <el-button slot="append" type="primary" plain @click="chooseClickFn">选择导出</el-button>
+                            <el-button slot="append" type="primary" plain @click="chooseClickFn">导出以下列表数据</el-button>
                         </el-input>
                         <el-button type="danger" plain :disabled="chooseNode.length == 0" @click="clearClickFn">清空列表</el-button>
                     </div>
